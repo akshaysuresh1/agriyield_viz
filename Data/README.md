@@ -8,5 +8,6 @@
 
 1. `ICRISAT_allcrops.csv`: District-level data of annual crop yield (kg/ha), production (1000 tons), and harvested area (1000 ha). Data cover years 1990 &ndash; 2017. <br>
 
-2. `India_districts2020*`: Shapefile (`.shp`) and relevant supporting files of Indian districts (2020). <br>
+2. `India_districts2020.*`: Shapefile (`.shp`) and relevant supporting files of Indian districts (2020) downloaded from Kaggle. <br>
 
+3. `India_dld.*`: Shapefile with district names updated to match corresponding entries in `ICRISAT_allcrops.csv`. <br>
