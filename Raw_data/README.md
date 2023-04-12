@@ -1,16 +1,12 @@
-## Mapping Historical Crop Yields in India
+### Data sources: <br>
 
-Here, we build an interactive dashboard using Python to visualize district-level distributions of annual crop yields in India. 
-
-Crops: Rice, Wheat, Sugarcane, Cotton, Groundnut <br>
-Years covered in data: 1990 &ndash; 2017 <br>
-Data source: [ICRISAT district-level unapportioned database](http://data.icrisat.org/dld/src/crops.html) <br>
-Data visualization packages: geopandas, matplotlib, plotly, seaborn TBD. <br>
-
-This project was completed as part of the Erdos Institute Data Visualization Mini-course, Apr 2023. <br>
+1. [District-level unapportioned database maintained by ICRISAT](http://data.icrisat.org/dld/src/crops.html) <br>
+2. [(Kaggle) Shapefile of Indian districts, 2020](https://www.kaggle.com/imdevskp/india-district-wise-shape-files)  <br>
 
 ---
+### Files: <br>
 
+1. `ICRISAT_allcrops.csv`: District-level data of annual crop yield (kg/ha), production (1000 tons), and harvested area (1000 ha). Data cover years 1990 &ndash; 2017. <br>
 
-## Troubleshooting <a name="troubleshooting"></a>
-Please submit an issue to voice any problems or requests. Constructive critcisms are highly encouraged.
+2. `India_districts2020*`: Shapefile (`.shp`) and relevant supporting files of Indian districts (2020). <br>
+
