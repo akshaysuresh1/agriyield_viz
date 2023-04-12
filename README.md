@@ -4,8 +4,13 @@ We build an interactive dashboard using Python to visualize district-level distr
 
 Crops: Rice, Wheat, Sugarcane, Cotton, Groundnut <br>
 Years covered in data: 1990 &ndash; 2017 <br>
-Data source: [ICRISAT district-level unapportioned database](http://data.icrisat.org/dld/src/crops.html) <br>
-Data visualization packages: geopandas, matplotlib, plotly, seaborn TBD. <br>
+
+Data sources: <br>
+1. [ICRISAT district-level unapportioned crop yield data](http://data.icrisat.org/dld/src/crops.html) <br>
+2. [(Kaggle) Shapefile of Indian districts, 2020](https://www.kaggle.com/imdevskp/india-district-wise-shape-files)  <br>
+
+Data visualization packages: <br>
+geopandas, matplotlib, plotly, seaborn, TBD. <br>
 
 This project was completed as part of the Erdos Institute Data Visualization Mini-course, Apr 2023. <br>
 
