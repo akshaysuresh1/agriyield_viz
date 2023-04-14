@@ -80,7 +80,9 @@ def display_choropleth(quantity, crop, year):
     cmax = final_df[column].max()
     #  Set up custom color map.
     ylgn = px.colors.sequential.YlGn
-    colorscale =  [[0, 'lightgray'], [(cmin+1)/(cmax+1), 'lightgray'], [(cmin+1)/(cmax+1), ylgn[0]], [1, ylgn[-2]]]   
+    colorscale =  [[0, 'lightgray'], [(cmin+1)/(cmax+1), 'lightgray'], [(cmin+1)/(cmax+1), ylgn[0]], [1, ylgn[-2]]]
+    # Lower resolution to improve plotting speed.
+    final_shp["geometry"] = (final_shp.to_crs(final_shp.estimate_utm_crs()).simplify(10000).to_crs(final_shp.crs))   
     # Plotting
     fig = px.choropleth(final_shp, geojson=final_shp.geometry,
                         locations=final_shp.index, color=column, projection="mercator", 
