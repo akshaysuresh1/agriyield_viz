@@ -10,7 +10,7 @@ Years covered in data: 1990 &ndash; 2017 <br>
 2. [(Kaggle) Shapefile of Indian districts, 2020](https://www.kaggle.com/imdevskp/india-district-wise-shape-files)  <br>
 
 <u>Data visualization packages:</u> <br>
-geopandas, matplotlib, plotly, seaborn, TBD. <br>
+geopandas, plotly, dash <br>
 
 This project was completed as part of the Erdos Institute Data Visualization Mini-course, Apr 2023. <br>
 
