@@ -15,7 +15,7 @@ df['dist_state'] = df['Dist Name']+', '+df['State Name']
 ############################################################
 # Creating application
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-server = app.server
+application = app.server
 
 # Quantity to plot
 quantity_options = [{'label':'Harvested area', 'value':'Area (1000 ha)'},
@@ -72,7 +72,7 @@ def display_choropleth(quantity, crop, year):
     # Assign NaNs to districts in shape file with no available crop growth data.
     df_comp = pd.DataFrame({'dist_state': diststates_not_in_df, column: np.ones(len(diststates_not_in_df))*-1})
     df_comp['text'] = df_comp['dist_state'] + '<br>' + pd.Series(['Data not available']*len(diststates_not_in_df))
-    final_df = selection_chosenyear.append(df_comp, ignore_index=True)
+    final_df = pd.concat([selection_chosenyear,df_comp], ignore_index=True)
     # Merge shapefile and agriculture data on common field "dist_state".
     final_shp = shp.merge(final_df, on='dist_state')
     # Set up color scheme for plotting.
@@ -93,7 +93,7 @@ def display_choropleth(quantity, crop, year):
     return fig
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=8080)
 
 # END OF CODE
 ############################################################
