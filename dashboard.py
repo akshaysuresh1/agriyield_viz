@@ -15,6 +15,7 @@ df['dist_state'] = df['Dist Name']+', '+df['State Name']
 ############################################################
 # Creating application
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # Quantity to plot
 quantity_options = [{'label':'Harvested area', 'value':'Area (1000 ha)'},
