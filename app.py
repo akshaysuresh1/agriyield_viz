@@ -95,7 +95,7 @@ def display_choropleth(quantity, crop, year):
     return fig
 
 if __name__ == "__main__":
-    app.run_server(debug=True, host='0.0.0.0', port=8080)
+    app.run_server(debug=True, host='0.0.0.0', port=8501)
 
 # END OF CODE
 ############################################################
