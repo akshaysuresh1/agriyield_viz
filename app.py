@@ -90,8 +90,9 @@ def display_choropleth(quantity, crop, year):
                         custom_data=['text'], range_color=(-1.0,cmax))
     fig.update_geos(fitbounds="locations", visible=False)
     fig.update_traces(hovertemplate='%{customdata[0]}')
+    fig.add_annotation(text='Year: '+str(year), x=0.8025, y=0.77, xanchor='left', yanchor='bottom', showarrow=False, font=dict(size=18, family='Verdana'))
     fig.update_layout(height=600, autosize=True, margin={"r": 0, "t": 0, "l": 0, "b": 0},
-                      coloraxis_colorbar=dict(len=0.5,x=0.95,xanchor='right',y=0.5,yanchor='middle'),)
+                      coloraxis_colorbar=dict(len=0.5,x=0.80,xanchor='left',y=0.5,yanchor='middle',tickfont_family='Verdana'),)
     return fig
 
 if __name__ == "__main__":
