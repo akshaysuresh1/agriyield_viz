@@ -76,18 +76,18 @@ def display_choropleth(quantity, crop, year):
     # Merge shapefile and agriculture data on common field "dist_state".
     final_shp = shp.merge(final_df, on='dist_state')
     # Set up color scheme for plotting.
-    cmin = final_df.loc[final_df[column]>=0, column].min()
-    cmax = final_df[column].max()
+    cmin = selection_allyears.loc[selection_allyears[column]>=0, column].min()
+    cmax = selection_allyears[column].max()
     #  Set up custom color map.
-    ylgn = px.colors.sequential.YlGn
-    colorscale =  [[0, 'lightgray'], [(cmin+1)/(cmax+1), 'lightgray'], [(cmin+1)/(cmax+1), ylgn[0]], [1, ylgn[-2]]]
+    cmap = px.colors.sequential.speed
+    colorscale =  [[0, 'lightgray'], [(cmin+1)/(cmax+1), 'lightgray'], [(cmin+1)/(cmax+1), cmap[0]], [1, cmap[-2]]]
     # Lower resolution to improve plotting speed.
     final_shp["geometry"] = (final_shp.to_crs(final_shp.estimate_utm_crs()).simplify(10000).to_crs(final_shp.crs))   
     # Plotting
     fig = px.choropleth(final_shp, geojson=final_shp.geometry,
                         locations=final_shp.index, color=column, projection="mercator", 
                         color_continuous_scale=colorscale, hover_data={'text':False, 'dist_state':False, column:False},
-                        custom_data=['text'])
+                        custom_data=['text'], range_color=(-1.0,cmax))
     fig.update_geos(fitbounds="locations", visible=False)
     fig.update_traces(hovertemplate='%{customdata[0]}')
     fig.update_layout(height=600, autosize=True, margin={"r": 0, "t": 0, "l": 0, "b": 0},
