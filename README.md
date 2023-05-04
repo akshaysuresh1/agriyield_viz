@@ -1,6 +1,8 @@
 ## Mapping Historical Crop Yields in India
 
-We build an [interactive dashboard](http://52.15.34.80:8501/) using Python to visualize district-level distributions of annual crop yields in India. 
+We build an [interactive dashboard](http://52.15.34.80:8501/) using Python to visualize district-level distributions of annual crop yields in India. <br>
+
+2 minute video presentation: [MP4](https://youtu.be/x6f5EpSTQ7c) <br>
 
 Crops: Rice, Wheat, Sugarcane, Cotton, Groundnut <br>
 Years covered in data: 1990 &ndash; 2017 <br>
