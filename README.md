@@ -17,7 +17,7 @@ geopandas, plotly, dash <br>
 This project was completed as part of the Erdos Institute Data Visualization Mini-course, Apr 2023. <br>
 ---
 
-![App screenshot](https://github.com/akshaysuresh1/agriyield_viz/blob/main/img/screenshot.png?raw=True)
+![App screenshot](https://github.com/akshaysuresh1/agriyield_viz/blob/main/media/screenshot.png?raw=True)
 
 ---
 
