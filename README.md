@@ -2,7 +2,8 @@
 
 We built an interactive dashboard (presently offline, view 2-minutes YouTube demo below) using Python to visualize district-level distributions of annual crop yields in India. <br>
 
-2 minute video presentation: [MP4](https://youtu.be/x6f5EpSTQ7c) <br>
+2-minutes video presentation: [YouTube link](https://youtu.be/x6f5EpSTQ7c) <br>
+Presentation slides: [PDF](https://github.com/akshaysuresh1/agriyield_viz/blob/main/media/agriviz_slides.pdf) <br>
 
 Crops: Rice, Wheat, Sugarcane, Cotton, Groundnut <br>
 Years covered in data: 1990 &ndash; 2017 <br>
