@@ -7,7 +7,7 @@ dash-bootstrap-components==1.4.1
 dash-core-components==2.0.0
 dash-html-components==2.0.0
 dash-table==5.0.0
-Fiona==1.9.3
+Fiona==1.9.6
 Flask>=2.2.5
 geopandas==0.12.2
 importlib-metadata==6.3.0
